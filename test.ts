@@ -1,0 +1,3 @@
+interface testPrettier {
+  test: 'test';
+}
