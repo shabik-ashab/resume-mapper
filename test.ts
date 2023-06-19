@@ -1,3 +1,0 @@
-interface testPrettier {
-  test: 'test';
-}
