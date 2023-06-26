@@ -30,6 +30,7 @@ const Page = () => {
     };
     singinWithEmailAndPassword(newUserInfo);
   };
+
   return (
     <div>
       <div>
