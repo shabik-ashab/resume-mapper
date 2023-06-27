@@ -1,51 +1,51 @@
 {
-    "name": "resume-mapper",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "prepare": "husky install",
-        "format": "prettier --write ."
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
-    },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx,json,css,scss,md}": [
-            "yarn format",
-            "git add"
-        ]
-    },
-    "dependencies": {
-        "@types/node": "20.3.1",
-        "@types/react": "18.2.12",
-        "@types/react-dom": "18.2.5",
-        "eslint": "^8.43.0",
-        "eslint-config-next": "13.4.6",
-        "next": "13.4.6",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "typescript": "5.1.3"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^17.6.5",
-        "@commitlint/config-conventional": "^17.6.5",
-        "commitizen": "^4.3.0",
-        "cz-conventional-changelog": "^3.3.0",
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "husky": "^8.0.0",
-        "lint-staged": "^13.2.2",
-        "prettier": "^2.8.8"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
+  "name": "resume-mapper",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "yarn format",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
+    "eslint": "^8.43.0",
+    "eslint-config-next": "13.4.6",
+    "next": "13.4.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
