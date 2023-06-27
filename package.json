@@ -27,7 +27,7 @@
     "@types/react-dom": "18.2.5",
     "eslint": "^8.43.0",
     "eslint-config-next": "13.4.6",
-    "firebase": "^9.23.0", // Resolved conflict by adding "firebase" dependency
+    "firebase": "^9.23.0",
     "next": "13.4.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
