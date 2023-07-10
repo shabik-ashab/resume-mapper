@@ -1,7 +1,12 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
+async function clean(model: string) {
+  await prisma[model].deleteMany({});
+}
+
 async function createUser() {
+  await clean('user');
   try {
     const user = await prisma.user.create({
       data: {
