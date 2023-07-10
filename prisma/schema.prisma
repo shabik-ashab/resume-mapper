@@ -11,7 +11,24 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id             Int            @id @default(autoincrement())
+  name           String
+  email          String         @unique
+
+  resume         Resume[]  
+}
+
+model Resume {
+  id              Int             @id @default(autoincrement())
+  title           String
+  name            String
+  email           String
+  phoneNumber     String
+  address         String
+  summary         String
+  portfolioLInk   String
+  linkdinLink     String
+
+  userId          Int
+  user            User @relation(fields: [userId], references:[id])
 }
