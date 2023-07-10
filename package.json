@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "ts-node-script": "ts-node --project tsconfig_scripts.json -r tsconfig-paths/register"
   },
   "husky": {
     "hooks": {
