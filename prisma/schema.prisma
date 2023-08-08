@@ -23,12 +23,106 @@ model Resume {
   title           String
   name            String
   email           String
-  phoneNumber     String
-  address         String
-  summary         String
-  portfolioLInk   String
-  linkdinLink     String
+  phoneNumber     String?
+  address         String?
+  summary         String?
+  portfolioLInk   String?
+  linkdinLink     String?
 
   userId          Int
   user            User @relation(fields: [userId], references:[id])
+
+  template        String?
+
+  webSiteUrl      webSiteUrl[]
+  customField     CustomField[]
+  education       Education[]
+  experience      Experience[]
+  skill           Skill[]
+  project         Project[]
+  certification   Certification[]
+  language        Language[]
+  reference       Reference[]
 }
+
+model webSiteUrl {
+  id            Int             @id @default(autoincrement())
+  webSiteName   String
+  url           String
+  resumeId      Int
+  resume        Resume  @relation(fields: [resumeId], references: [id])  
+}
+
+
+model CustomField {
+  id         Int     @id @default(autoincrement())
+  fieldName  String
+  fieldValue String
+  resumeId   Int
+  resume     Resume  @relation(fields: [resumeId], references: [id])
+}
+
+model Education {
+  id        Int      @id @default(autoincrement())
+  degree    String
+  university String
+  year      Int
+  resumeId  Int
+  resume    Resume   @relation(fields: [resumeId], references: [id])
+}
+
+model Experience {
+  id          Int      @id @default(autoincrement())
+  title       String
+  company     String
+  startDate   DateTime
+  endDate     DateTime?
+  currentlyWorkHere Boolean?
+  description String[]
+  resumeId    Int
+  resume      Resume   @relation(fields: [resumeId], references: [id])
+}
+
+model Skill {
+  id        Int      @id @default(autoincrement())
+  name      String
+  resumeId  Int
+  resume    Resume   @relation(fields: [resumeId], references: [id])
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  liveLink    String?
+  githubLink  String?  
+  description String[]
+  resumeId    Int
+  resume      Resume   @relation(fields: [resumeId], references: [id])
+}
+
+model Certification {
+  id           Int      @id @default(autoincrement())
+  name         String
+  organization String
+  year         Int
+  resumeId     Int
+  resume       Resume   @relation(fields: [resumeId], references: [id])
+}
+
+model Language {
+  id        Int      @id @default(autoincrement())
+  name      String
+  resumeId  Int
+  resume    Resume   @relation(fields: [resumeId], references: [id])
+}
+
+model Reference {
+  id        Int      @id @default(autoincrement())
+  name      String
+  position  String
+  company   String
+  contact   String
+  resumeId  Int
+  resume    Resume   @relation(fields: [resumeId], references: [id])
+}
+

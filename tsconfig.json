@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/seed/createUser.ts"
+    "app/seed/seed.ts"
   ],
   "exclude": ["node_modules"]
 }
